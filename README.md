@@ -1,6 +1,4 @@
-# vue init webapck name
-
-# Vue 文档学习笔记
+# Vue 文档学习笔记 (vue init webapck name)
 
 # vue-cli-demo
 
