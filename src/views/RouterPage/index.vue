@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1>“{{ msg }}” 笔记</h1>
     <h2>路由介绍页面<a href="https://router.vuejs.org/zh-cn/" target="_blank">https://router.vuejs.org/zh-cn/</a></h2>
     <h2>{{ username.id ? username : null }}</h2>
     <div><router-link to="/router/123">Go to Router/123</router-link></div>

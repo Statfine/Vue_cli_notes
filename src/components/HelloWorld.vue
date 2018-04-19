@@ -81,6 +81,7 @@
       </li>
     </ul>
     <router-link to="/router">我的路由页面</router-link>
+    <router-link to="/request">我的请求页面</router-link>
   </div>
 </template>
 
