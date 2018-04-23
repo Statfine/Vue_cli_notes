@@ -16,6 +16,7 @@ const Dashboard22 = () => import('@/views/RouterPage/Dashboard/dashboard2_2')
 
 const RequestPage = () => import('@/views/RequestPage')
 const VueElementUiPage = () => import('@/views/VueElementUiPage')
+const VueJsPage = () => import('@/views/VueJsPage')
 
 const User = {
   template: `
@@ -98,6 +99,11 @@ const router = new Router({
       path: '/ui',
       name: 'VueElementUiPage',
       component: VueElementUiPage
+    },
+    {
+      path: '/vue',
+      name: 'VueJsPage',
+      component: VueJsPage
     }
   ]
 })

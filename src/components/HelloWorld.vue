@@ -80,9 +80,10 @@
         </a>
       </li>
     </ul>
-    <router-link to="/router">我的路由页面</router-link>
-    <router-link to="/request">我的请求页面</router-link>
-    <router-link to="/ui">Vue Element UI</router-link>
+    <router-link class="note" to="/vue">Vue Api</router-link>
+    <router-link class="note" to="/router">我的路由页面</router-link>
+    <router-link class="note" to="/request">我的请求页面</router-link>
+    <router-link class="note" to="/ui">Vue Element UI</router-link>
   </div>
 </template>
 
@@ -114,5 +115,8 @@ li {
 a {
   color: #42b983;
   display: block;
+}
+.note {
+  font-size: 24px;
 }
 </style>
