@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
+    <h2 style="display: none">Essential Links</h2>
     <ul>
       <li>
         <a
@@ -45,7 +45,7 @@
         </a>
       </li>
     </ul>
-    <h2>Ecosystem</h2>
+    <h2 style="display: none">Ecosystem</h2>
     <ul>
       <li>
         <a
@@ -82,6 +82,7 @@
     </ul>
     <router-link to="/router">我的路由页面</router-link>
     <router-link to="/request">我的请求页面</router-link>
+    <router-link to="/ui">Vue Element UI</router-link>
   </div>
 </template>
 
@@ -112,5 +113,6 @@ li {
 }
 a {
   color: #42b983;
+  display: block;
 }
 </style>

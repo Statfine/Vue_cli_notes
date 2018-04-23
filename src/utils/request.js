@@ -1,6 +1,6 @@
 import axios from 'axios'
 import qs from 'qs'
-// import { Message } from 'element-ui'
+import { Message } from 'element-ui'
 
 // create an axios instanceaxios 配置
 const service = axios.create({
@@ -70,11 +70,11 @@ service.interceptors.response.use(
   //     }
   error => {
     console.log('err' + error)// for debug
-    // Message({
-    //   message: error.message,
-    //   type: 'error',
-    //   duration: 5 * 1000
-    // })
+    Message({
+      message: error.message,
+      type: 'error',
+      duration: 5 * 1000
+    })
     return Promise.reject(error)
   })
 
