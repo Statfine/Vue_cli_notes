@@ -96,7 +96,7 @@ a {
 .container {
   width: 560px;
   margin: 0 auto 40px auto;
-  border-bottom: 1px solid #e9e9e9;
+  border-bottom: 3px solid #e9e9e9;
 }
 .title {
   text-align: left;
