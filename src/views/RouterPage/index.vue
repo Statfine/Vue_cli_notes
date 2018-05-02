@@ -27,6 +27,9 @@ export default {
       params: this.$route.params.id === '123' ? 'abc' : '123'
     }
   },
+  mounted () {
+    console.log('mounted')
+  },
   computed: {
     username () {
       // 我们很快就会看到 route `params` 是什么
@@ -42,6 +45,10 @@ export default {
       // 对路由变化作出响应...
       console.log('watchroute', to, from)
       this.params = this.$route.params.id === '123' ? 'abc' : '123'
+    },
+    '$store.state.app.sum': function (after, before) {
+      console.log(after)
+      console.log(before)
     }
   },
   beforeRouteUpdate (to, from, next) {
