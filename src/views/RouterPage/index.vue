@@ -27,8 +27,14 @@ export default {
       params: this.$route.params.id === '123' ? 'abc' : '123'
     }
   },
+  created () {
+    console.log('created')
+  },
   mounted () {
     console.log('mounted')
+  },
+  destroyed () {
+    console.log('destroyed')
   },
   computed: {
     username () {
@@ -49,7 +55,10 @@ export default {
     '$store.state.app.sum': function (after, before) {
       console.log(after)
       console.log(before)
-    }
+    },
+    msg: function (val) {
+      console.log('watch', val)
+    },
   },
   beforeRouteUpdate (to, from, next) {
     // react to route changes...
