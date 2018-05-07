@@ -77,19 +77,26 @@ export default {
     },
     handleRequrest () {
       console.log('get')
-      // 请求
-      new Promise((resolve, reject) => {
-        getInfo().then(response => {
-          console.log('Promise response', response)
-          resolve(response.data)
-        }).catch(error => {
-          reject(error)
-        })
-      }).then((response) => {
-        console.log('Promise then', response)
-        this.list = response
-      }).catch((error) => {
-        console.log('Promise catch=>', error)
+      // Promise请求
+      // new Promise((resolve, reject) => {
+      //   getInfo().then(response => {
+      //     console.log('Promise response', response)
+      //     resolve(response.data)
+      //   }).catch(error => {
+      //     reject(error)
+      //   })
+      // }).then((response) => {
+      //   console.log('Promise then', response)
+      //   this.list = response
+      // }).catch((error) => {
+      //   console.log('Promise catch=>', error)
+      // })
+      // api直接请求
+      getInfo().then(response => {
+        console.log('Promise response', response)
+        this.list = response.data
+      }).catch(error => {
+        console.log('error', error)
       })
     }
   }

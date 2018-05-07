@@ -58,7 +58,7 @@ export default {
     },
     msg: function (val) {
       console.log('watch', val)
-    },
+    }
   },
   beforeRouteUpdate (to, from, next) {
     // react to route changes...

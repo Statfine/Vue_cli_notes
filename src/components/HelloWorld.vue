@@ -80,8 +80,10 @@
         </a>
       </li>
     </ul>
-    <router-link class="note" to="/vue">Vue Api</router-link>
-    <router-link class="note" to="/router">我的路由页面</router-link>
+    <router-link class="note" to="/life">生命周期</router-link>
+    <router-link class="note" to="/router">路由页面</router-link>
+    <router-link class="note" to="/vue">Vue JS</router-link>
+    <router-link class="note" to="/style">Vue Style</router-link>
     <router-link class="note" to="/request">我的请求页面</router-link>
     <router-link class="note" to="/ui">Vue Element UI</router-link>
     <router-link class="note" to="/vuex">VueX</router-link>

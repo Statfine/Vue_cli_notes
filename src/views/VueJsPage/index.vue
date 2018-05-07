@@ -26,6 +26,15 @@
       <p>Methods: {{ fullNameMethods() }}</p>
       <p>Watch: {{ fullName }}</p>
     </div>
+    <div class="container">
+      <p class="title">数组遍历</p>
+      <div
+        v-for="(item, index) in list"
+        :key="item"
+      >
+        {{ index + ':' + item}}
+      </div>
+    </div>
   </div>
 </template>
 
@@ -44,7 +53,8 @@ export default {
       dynamicId: 'idP',
       firstName: 'Foo',
       lastName: 'Bar',
-      fullName: 'Foo Bar'
+      fullName: 'Foo Bar',
+      list: [1, 2, 3, 4]
     }
   },
   computed: {

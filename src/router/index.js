@@ -14,10 +14,12 @@ const Dashboard1 = () => import('@/views/RouterPage/Dashboard/dashboard1')
 const Dashboard21 = () => import('@/views/RouterPage/Dashboard/dashboard2_1')
 const Dashboard22 = () => import('@/views/RouterPage/Dashboard/dashboard2_2')
 
+const LifePage = () => import('@/views/LifePage')
 const RequestPage = () => import('@/views/RequestPage')
 const VueElementUiPage = () => import('@/views/VueElementUiPage')
 const VueJsPage = () => import('@/views/VueJsPage')
 const VuexPage = () => import('@/views/VuexPage')
+const StylePage = () => import('@/views/StylePage')
 
 const User = {
   template: `
@@ -110,6 +112,16 @@ const router = new Router({
       path: '/vuex',
       name: 'VuexPage',
       component: VuexPage
+    },
+    {
+      path: '/life',
+      name: 'LifePage',
+      component: LifePage
+    },
+    {
+      path: '/style',
+      name: 'StylePage',
+      component: StylePage
     }
   ]
 })

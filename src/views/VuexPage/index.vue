@@ -44,6 +44,13 @@ export default {
   watch: {
     '$route' (to, from) {
       console.log('watchroute', to, from)
+    },
+    '$store.state.app.sum': function (after, before) {
+      console.log(after)
+      console.log(before)
+    },
+    value: function (val) {
+      console.log('watch', val)
     }
   },
   beforeRouteUpdate (to, from, next) {
