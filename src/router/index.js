@@ -20,6 +20,7 @@ const VueElementUiPage = () => import('@/views/VueElementUiPage')
 const VueJsPage = () => import('@/views/VueJsPage')
 const VuexPage = () => import('@/views/VuexPage')
 const StylePage = () => import('@/views/StylePage')
+const PropsPage = () => import('@/views/PropsPage')
 
 const User = {
   template: `
@@ -122,6 +123,11 @@ const router = new Router({
       path: '/style',
       name: 'StylePage',
       component: StylePage
+    },
+    {
+      path: '/props',
+      name: 'PropsPage',
+      component: PropsPage
     }
   ]
 })

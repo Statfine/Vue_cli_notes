@@ -84,6 +84,7 @@
     <router-link class="note" to="/router">路由页面</router-link>
     <router-link class="note" to="/vue">Vue JS</router-link>
     <router-link class="note" to="/style">Vue Style</router-link>
+    <router-link class="note" to="/props">Vue Props</router-link>
     <router-link class="note" to="/request">我的请求页面</router-link>
     <router-link class="note" to="/ui">Vue Element UI</router-link>
     <router-link class="note" to="/vuex">VueX</router-link>
