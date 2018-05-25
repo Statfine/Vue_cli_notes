@@ -21,6 +21,7 @@ const VueJsPage = () => import('@/views/VueJsPage')
 const VuexPage = () => import('@/views/VuexPage')
 const StylePage = () => import('@/views/StylePage')
 const PropsPage = () => import('@/views/PropsPage')
+const ThridPlugin = () => import('@/views/ThirdPluginPage')
 
 const User = {
   template: `
@@ -128,6 +129,11 @@ const router = new Router({
       path: '/props',
       name: 'PropsPage',
       component: PropsPage
+    },
+    {
+      path: '/thridPlugin',
+      name: 'thridPlugin',
+      component: ThridPlugin
     }
   ]
 })

@@ -88,6 +88,7 @@
     <router-link class="note" to="/request">我的请求页面</router-link>
     <router-link class="note" to="/ui">Vue Element UI</router-link>
     <router-link class="note" to="/vuex">VueX</router-link>
+    <router-link class="note" to="/thridPlugin">插件</router-link>
   </div>
 </template>
 
