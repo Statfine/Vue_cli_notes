@@ -15,6 +15,7 @@
 
 <script>
 import html2canvas from 'html2canvas'
+import domtoimage from 'dom-to-image'
 export default {
   name: 'html2canvas',
   data () {
@@ -34,7 +35,13 @@ export default {
   methods: {
     handleGetCanvas () {
       html2canvas(document.getElementById('imageCover'), { useCORS: true }).then((canvas) => {
-        this.imgSrc = canvas.toDataURL('image/png')
+        // this.imgSrc = canvas.toDataURL('image/png')
+        console.log('html2canvas', canvas.toDataURL('image/png'))
+      })
+      domtoimage.toSvg(document.getElementById('imageCover')).then((dataUrl) => {
+        /* do something */
+        console.log('domtoimage', dataUrl)
+        this.imgSrc = dataUrl
       })
     }
   }
