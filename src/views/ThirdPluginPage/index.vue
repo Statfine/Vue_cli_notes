@@ -5,10 +5,12 @@
       <el-button type="primary" icon="el-icon-search" @click="handleGetCanvas">canvas</el-button>
     </div>
     <div id="imageCover" class="imageCover">
-      <img crossOrigin="Anonymous" :src="picture[0]" alt="logo" width="200" height="200" />
+      <img crossOrigin="Anonymous" id="imageCanvas" :src="picture[0]" alt="logo" width="200" height="200" />
       <img crossOrigin="Anonymous" class="p_cover_one" :src="picture[1]" alt="" />
       <img crossOrigin="Anonymous" class="p_cover_two" :src="picture[2]" alt="" />
     </div>
+    <img :src="imgHtmlSrc" alt="logo" />
+    <img :src="imgDomSrc" alt="logo" />
     <img :src="imgSrc" alt="logo" />
   </div>
 </template>
@@ -21,6 +23,8 @@ export default {
   data () {
     return {
       msg: 'html2canvas',
+      imgHtmlSrc: '',
+      imgDomSrc: '',
       imgSrc: '',
       picture: [
         'http://clip-worldcup.oss-cn-beijing.aliyuncs.com//test/videoImage/EcYrRKRtEydM.png',
@@ -34,15 +38,21 @@ export default {
   },
   methods: {
     handleGetCanvas () {
+      // html2canvas
       html2canvas(document.getElementById('imageCover'), { useCORS: true }).then((canvas) => {
-        // this.imgSrc = canvas.toDataURL('image/png')
         console.log('html2canvas', canvas.toDataURL('image/png'))
+        this.imgHtmlSrc = canvas.toDataURL('image/png')
       })
+      // domtoimage
       domtoimage.toSvg(document.getElementById('imageCover')).then((dataUrl) => {
-        /* do something */
         console.log('domtoimage', dataUrl)
-        this.imgSrc = dataUrl
+        this.imgDomSrc = dataUrl
       })
+      // canvas
+      const canvas = document.createElement('canvas')
+      const ctx = canvas.getContext('2d')
+      ctx.drawImage(document.getElementById('imageCanvas'), 0, 0)
+      this.imgSrc = canvas.toDataURL()
     }
   }
 }
