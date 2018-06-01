@@ -22,6 +22,7 @@ const VuexPage = () => import('@/views/VuexPage')
 const StylePage = () => import('@/views/StylePage')
 const PropsPage = () => import('@/views/PropsPage')
 const ThridPlugin = () => import('@/views/ThirdPluginPage')
+const ImagePage = () => import('@/views/ImagePage')
 
 const User = {
   template: `
@@ -134,6 +135,11 @@ const router = new Router({
       path: '/thridPlugin',
       name: 'thridPlugin',
       component: ThridPlugin
+    },
+    {
+      path: '/image',
+      name: 'image',
+      component: ImagePage
     }
   ]
 })
